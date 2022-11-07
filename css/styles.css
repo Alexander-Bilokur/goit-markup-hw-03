@@ -13,6 +13,10 @@
    --border--secondary: #ececec;
 }
 
+* {
+   box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -23,7 +27,7 @@ p {
 
 /* Загальні */
 
-.work-item > img {
+img {
    display: block;
    width: 100%;
    height: auto;
@@ -223,9 +227,14 @@ main .hero {
    display: flex;
 }
 
-.work-item:not(:last-child) {
-   margin-right: 30px;
+.work-list .work-item {
+   flex-basis: calc(100% / 3 - 30px);
+   margin-left: 30px;
 }
+
+/* .work-item:not(:last-child) {
+   margin-right: 30px;
+} */
 
 .feature-list {
    display: flex;
@@ -313,11 +322,6 @@ main .hero {
    font-style: normal;
    font-size: 14px;
    line-height: 1.7;
-   padding: 5px 5px;
-}
-
-.item-secondary .location {
-   padding: 5px 5px;
 }
 
 .aut-nav .location:hover,
